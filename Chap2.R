@@ -16,8 +16,8 @@ cor(cdc_data$weight, cdc_data$wtdesire) # 0.8000521
 # Ex4: Analysis of the wdiff
 cdc_data$wdiff = cdc_data$wtdesire - cdc_data$weight
 summary(cdc_data$wdiff)
-plot(cdc_data$weight, cdc_data$wdiff)
+plot(cdc_data$weight, cdc_data$wdiff, xlab='weight', ylab='wdiff')
 
 # Ex5: Histogram of the Age
-hist(cdc_data$age, breaks=50)
-hist(cdc_data$age, breaks=100)
+hist(cdc_data$age, breaks=50, xlab = 'age')
+hist(cdc_data$age, breaks=100, xlab = 'age')
