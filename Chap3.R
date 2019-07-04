@@ -21,8 +21,8 @@ print_p_or_np <- function(from=1, to=20, size=1) {
   xs = sample(from:to, size=size)
   is_gte_10s = xs >= 10
   str_to_prints = sapply(is_gte_10s, function(is_gte_10) {if (is_gte_10) 'P' else 'NP'})
-  print(paste('Sampled numbers:', toString(xs), sep=' '))
-  print(paste('Results:', toString(str_to_prints), sep=' '))
+  print(paste('Sampled numbers: ', toString(xs)))
+  print(paste('Results: ', toString(str_to_prints)))
 }
 
 # Ex 2: Print 'P' or 'NP'
