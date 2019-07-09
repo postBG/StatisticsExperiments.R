@@ -21,23 +21,32 @@ calculate_sampled_mean = function(sale_prices, size = 50, iterate = 1){
 # Ex 2: Sample 50 prices and calculate expected mu
 sample_size = 50
 mean50 = calculate_sampled_mean(sale_prices, size = sample_size, iterate = 1)[1]
+mean50
 
 # Ex 3: Repeat Ex 2 1000 times
-sample_mean50 = calculate_sampled_mean(sale_prices, size = sample_size, iterate = 1000)
+sample_mean50 = calculate_sampled_mean(sale_prices, size = sample_size, iterate = 5000)
 hist(sample_mean50, main = 'Histogram of Sampled means 50', xlab = 'sampled mean 50', breaks = 40)
-mean_of_sampled_mean50 = mean(sample_mean50)
-var_of_sampled_mean50 = var(sample_mean50)
 
 # Ex 4: Calculate mean and variance of sampled_mean50, and compare with population's mean and variance
+mean_of_sampled_mean50 = mean(sample_mean50)
+mean_of_sampled_mean50
+var_of_sampled_mean50 = var(sample_mean50)
+var_of_sampled_mean50
+
 var_of_sampled_mean50 * sample_size
 mean_of_sampled_mean50
 
 # Ex 5: change sample size to 150
 sample_size2 = 150
-sample_mean150 = calculate_sampled_mean(sale_prices, size = sample_size2, iterate = 1000)
+sample_mean150 = calculate_sampled_mean(sale_prices, size = sample_size2, iterate = 5000)
 hist(sample_mean150, main = 'Histogram of Sampled means 150', xlab = 'sampled mean 150', breaks = 40)
+
+
 mean_of_sampled_mean150 = mean(sample_mean150)
+mean_of_sampled_mean150
 var_of_sampled_mean150 = var(sample_mean150)
+var_of_sampled_mean150
+
 
 mean_of_sampled_mean150
 var_of_sampled_mean150 * sample_size2
