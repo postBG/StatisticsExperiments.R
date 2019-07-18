@@ -1,8 +1,13 @@
-paint = read.table('~/RStudioProjects/dataset/ch06/paint.txt')
-tapply(paint$time, paint$group, mean)
+textbooks = read.table('~/RStudioProjects/dataset/ch06/textbooks.txt')
+t.test(textbooks$diff, mu = 0, alternative = 'two.sided')
+t.test(textbooks$uclaNew, textbooks$amazNew, paired = T, mu = 0, alternative = 'two.sided')
 
-var.test(paint$time ~ paint$group)
-before = paint[paint$group == 1,]$time
-after = paint[paint$group == 2,]$time
-var.test(before, after)
 
+run10samp = read.table('~/RStudioProjects/dataset/ch06/run10samp.txt')
+splited = split(run10samp, run10samp$gender)
+females = splited$F
+males = splited$M
+
+
+var.test(females$time, males$time)
+t.test(females$time, males$time, var.equal = T, alternative = 'two.sided')
